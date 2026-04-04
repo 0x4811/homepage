@@ -4,108 +4,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wouter Slotboom — Ethisch Hacker</title>
-  <meta name="description" content="Wouter Slotboom is ethisch hacker en onderzoeksjournalist. Hij demonstreert hoe kwetsbaar digitale systemen zijn — voor NOS, BNR, RTL, De Correspondent en op podia door heel Nederland." />
+  <meta name="description" content="Wouter Slotboom is ethisch hacker en onderzoeksjournalist. Bekend van De Correspondent, NOS, BNR en RTL." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- Nav -->
   <nav id="navbar">
     <div class="nav-inner">
-      <span class="logo"><span class="prompt">&gt;</span> WS</span>
+      <a href="#" class="logo">
+        <span class="logo-bracket">[</span>WS<span class="logo-bracket">]</span>
+      </a>
       <ul class="nav-links">
-        <li><a href="#about">Over mij</a></li>
-        <li><a href="#impact">Impact</a></li>
-        <li><a href="#media">Media</a></li>
-        <li><a href="#speaking">Optredens</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about"><span class="nav-num">01</span>Over mij</a></li>
+        <li><a href="#media"><span class="nav-num">02</span>Media</a></li>
+        <li><a href="#speaking"><span class="nav-num">03</span>Optredens</a></li>
+        <li><a href="#contact"><span class="nav-num">04</span>Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mm-link">Over mij</a></li>
+      <li><a href="#media" class="mm-link">Media</a></li>
+      <li><a href="#speaking" class="mm-link">Optredens</a></li>
+      <li><a href="#contact" class="mm-link">Contact</a></li>
+    </ul>
+  </div>
+
   <!-- Hero -->
   <section id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-content">
-      <p class="hero-label reveal-hero">Ethisch Hacker &amp; Onderzoeksjournalist</p>
-      <h1 class="hero-name reveal-hero">Wouter<br>Slotboom</h1>
-      <p class="hero-quote reveal-hero">"Alles wat je nodig hebt is €70, een gemiddeld IQ en een beetje geduld."</p>
-      <div class="hero-buttons reveal-hero">
-        <a href="#media" class="btn btn-primary">Bekijk mijn werk</a>
-        <a href="#contact" class="btn btn-outline">Boek een lezing</a>
+    <div class="hero-noise"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-inner">
+      <div class="hero-tag"><span class="tag-dot"></span>Ethisch Hacker &amp; Onderzoeksjournalist</div>
+      <h1 class="hero-name">
+        <span class="line">Wouter</span>
+        <span class="line accent-line">Slotboom</span>
+      </h1>
+      <p class="hero-sub">
+        Ik laat zien hoe kwetsbaar jouw digitale wereld is<br>
+        — <em>voordat een ander dat doet.</em>
+      </p>
+      <div class="hero-cta">
+        <a href="#media" class="btn-hero-primary">Bekijk mijn werk</a>
+        <a href="#contact" class="btn-hero-ghost">Boek een lezing <span class="arrow-anim">→</span></a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
+    <div class="hero-scroll">
+      <div class="scroll-track"><div class="scroll-thumb"></div></div>
+      <span>scroll</span>
+    </div>
+    <div class="hero-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>De Correspondent</span><span class="dot">·</span>
+        <span>NOS Nieuws</span><span class="dot">·</span>
+        <span>BNR Nieuwsradio</span><span class="dot">·</span>
+        <span>RTL Nieuws</span><span class="dot">·</span>
+        <span>Follow the Money</span><span class="dot">·</span>
+        <span>NPO 3FM</span><span class="dot">·</span>
+        <span>EditieNL</span><span class="dot">·</span>
+        <span>The Correspondent</span><span class="dot">·</span>
+        <span>De Correspondent</span><span class="dot">·</span>
+        <span>NOS Nieuws</span><span class="dot">·</span>
+        <span>BNR Nieuwsradio</span><span class="dot">·</span>
+        <span>RTL Nieuws</span><span class="dot">·</span>
+        <span>Follow the Money</span><span class="dot">·</span>
+        <span>NPO 3FM</span><span class="dot">·</span>
+        <span>EditieNL</span><span class="dot">·</span>
+        <span>The Correspondent</span><span class="dot">·</span>
+      </div>
     </div>
   </section>
 
   <!-- About -->
   <section id="about">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-left reveal">
-          <div class="avatar-ring">
-            <div class="avatar-placeholder">WS</div>
+      <div class="about-layout">
+        <div class="about-visual reveal">
+          <div class="avatar-card">
+            <div class="avatar-glow"></div>
+            <div class="avatar-inner">WS</div>
+            <div class="avatar-badge">
+              <span class="badge-dot"></span>
+              Beschikbaar voor lezingen
+            </div>
           </div>
-          <div class="social-links">
-            <a href="https://x.com/wouter4811" target="_blank" rel="noopener" title="X / Twitter">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <div class="about-socials">
+            <a href="https://x.com/wouter4811" target="_blank" rel="noopener" class="social-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              @Wouter4811
             </a>
-            <a href="https://nl.linkedin.com/in/wouterslotboom" target="_blank" rel="noopener" title="LinkedIn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="https://github.com/0x4811" target="_blank" rel="noopener" title="GitHub">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            <a href="https://nl.linkedin.com/in/wouterslotboom" target="_blank" rel="noopener" class="social-pill">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
             </a>
           </div>
         </div>
-        <div class="about-right reveal">
-          <h2 class="section-title">Over mij</h2>
-          <p class="about-intro">Ik ben Wouter Slotboom — ethisch hacker, onderzoeksjournalist en security-spreker. Al meer dan tien jaar demonstreer ik live hoe makkelijk het is om digitale systemen te kraken, van openbare wifi-netwerken tot overheidsinfrastructuur.</p>
-          <p>Mijn aanpak is simpel: ik laat het zien in plaats van erover te praten. In een Amsterdams café heb ik in 20 minuten de inloggegevens van 20 bezoekers onderschept — hun bankwachtwoorden, e-mail en DigiD. Dat artikel werd het meest gelezen stuk van De Correspondent ooit, en werd overgenomen door media in tientallen landen.</p>
-          <p>Ik werk samen met journalisten, TV-programma's en organisaties om kwetsbaarheden verantwoord bloot te leggen. Niet om schade te veroorzaken, maar om mensen en bedrijven wakker te schudden.</p>
-          <div class="skills">
-            <span class="skill-tag">WiFi Exploitatie</span>
-            <span class="skill-tag">Penetration Testing</span>
-            <span class="skill-tag">Man-in-the-Middle</span>
-            <span class="skill-tag">Responsible Disclosure</span>
-            <span class="skill-tag">Security Awareness</span>
-            <span class="skill-tag">Onderzoeksjournalistiek</span>
-            <span class="skill-tag">Keynote Speaker</span>
+        <div class="about-content">
+          <div class="label reveal">Over mij</div>
+          <h2 class="about-heading reveal">Ik hack om te <span class="text-accent">beschermen</span></h2>
+          <p class="about-lead reveal">In een Amsterdams café onderschepte ik in 20 minuten de bankwachtwoorden, e-mailadressen en DigiD-gegevens van tientallen bezoekers. Niet met geavanceerde tools — met €70 aan hardware en een laptop.</p>
+          <p class="about-body reveal">Als ethisch hacker en onderzoeksjournalist werk ik samen met de grootste nieuwsmedia van Nederland om digitale kwetsbaarheden bloot te leggen. Van openbare wifi-netwerken tot verlopen politiedomeinen — ik laat zien waar de zwakke plekken zitten, zodat ze gedicht kunnen worden.</p>
+          <p class="about-body reveal">Mijn aanpak is altijd concreet: geen theorie, maar demonstraties die mensen en organisaties direct wakker schudden.</p>
+          <div class="skill-cloud reveal">
+            <span>WiFi Exploitatie</span>
+            <span>Man-in-the-Middle</span>
+            <span>Penetration Testing</span>
+            <span>Responsible Disclosure</span>
+            <span>Security Awareness</span>
+            <span>Onderzoeksjournalistiek</span>
+            <span>Keynote Speaker</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Impact stats -->
-  <section id="impact">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <span class="stat-number">20</span>
-          <span class="stat-unit">minuten</span>
-          <span class="stat-label">om 20 bezoekers te hacken in een café</span>
-        </div>
-        <div class="stat-item reveal">
-          <span class="stat-number">€70</span>
-          <span class="stat-unit"></span>
-          <span class="stat-label">aan apparatuur genoeg om een heel netwerk af te luisteren</span>
-        </div>
-        <div class="stat-item reveal">
-          <span class="stat-number">1,5</span>
-          <span class="stat-unit">jaar</span>
-          <span class="stat-label">politie-e-mail ontvangen via verlopen domeinnamen</span>
-        </div>
-        <div class="stat-item reveal">
-          <span class="stat-number">10+</span>
-          <span class="stat-unit">jaar</span>
-          <span class="stat-label">actief als ethisch hacker en security-trainer</span>
-        </div>
+  <!-- Stats -->
+  <section id="stats">
+    <div class="stats-strip">
+      <div class="stat-block reveal">
+        <span class="stat-num" data-target="20">0</span>
+        <span class="stat-sfx">min</span>
+        <p>Om tientallen bezoekers in een café te hacken</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-block reveal">
+        <span class="stat-prefix">€</span><span class="stat-num" data-target="70">0</span>
+        <p>Aan apparatuur genoeg om een heel netwerk af te luisteren</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-block reveal">
+        <span class="stat-num" data-target="18">0</span>
+        <span class="stat-sfx">mnd</span>
+        <p>Politie-e-mail ontvangen via verlopen domeinnamen</p>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-block reveal">
+        <span class="stat-num" data-target="10">0</span>
+        <span class="stat-sfx">+jr</span>
+        <p>Actief als ethisch hacker en security-trainer</p>
       </div>
     </div>
   </section>
@@ -113,139 +164,116 @@
   <!-- Media -->
   <section id="media">
     <div class="container">
-      <h2 class="section-title reveal">In de media</h2>
-      <p class="section-sub reveal">Onderzoeken en demonstraties die nationaal en internationaal aandacht trokken.</p>
+      <div class="section-header reveal">
+        <div class="label">In de media</div>
+        <h2>Onderzoeken die <span class="text-accent">Nederland wakker</span> schudden</h2>
+      </div>
 
-      <div class="media-grid">
+      <div class="bento-grid">
 
-        <a href="https://decorrespondent.nl/845/dit-geef-je-allemaal-prijs-als-je-inlogt-op-een-openbaar-wifinetwerk/25988820-b2a600e1" target="_blank" rel="noopener" class="media-card featured reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">De Correspondent</span>
-              <span class="media-year">2013</span>
-            </div>
-            <span class="badge">Viral</span>
+        <a href="https://decorrespondent.nl/845/dit-geef-je-allemaal-prijs-als-je-inlogt-op-een-openbaar-wifinetwerk/25988820-b2a600e1" target="_blank" rel="noopener" class="bento-card bento-hero reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">De Correspondent</span>
+            <span class="outlet-year">2013</span>
+            <span class="tag-viral">Viral</span>
           </div>
           <h3>Dit geef je allemaal prijs als je inlogt op een openbaar wifinetwerk</h3>
-          <p>In een Amsterdams café onderschepte ik in 20 minuten de inloggegevens van tientallen bezoekers — bankwachtwoorden, e-mail, DigiD. Het meest gelezen artikel van De Correspondent ooit. Overgenomen door The Guardian, Quartz, Medium en media in tientallen landen.</p>
-          <div class="card-tags">
-            <span>WiFi Security</span>
-            <span>Viral</span>
-            <span>Internationaal</span>
+          <p>Het meest gelezen artikel van De Correspondent ooit. In 20 minuten onderschepte ik inloggegevens van tientallen bezoekers in een Amsterdams café. Overgenomen door The Guardian, Quartz en media in tientallen landen.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>WiFi</span><span>Privacy</span><span>Internationaal</span></div>
+            <span class="read-more">Lees artikel →</span>
           </div>
-          <span class="card-arrow">→ Lees artikel</span>
         </a>
 
-        <a href="https://thecorrespondent.com/1101/what-we-give-away-when-we-log-on-to-a-public-wifi-network/33862356-a30a8943" target="_blank" rel="noopener" class="media-card reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">The Correspondent</span>
-              <span class="media-year">2014</span>
-            </div>
-          </div>
-          <h3>What we give away when we log on to a public WiFi network</h3>
-          <p>Engelse vertaling van het WiFi-onderzoek. Bereikt een wereldwijd publiek en werd aanleiding voor security-bewustzijnscampagnes in meerdere landen.</p>
-          <div class="card-tags">
-            <span>English</span>
-            <span>International</span>
-          </div>
-          <span class="card-arrow">→ Read article</span>
-        </a>
-
-        <a href="https://nos.nl/artikel/2153947-hacker-kreeg-e-mail-voor-politie-binnen.html" target="_blank" rel="noopener" class="media-card reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">NOS Nieuws</span>
-              <span class="media-year">2016</span>
-            </div>
+        <a href="https://nos.nl/artikel/2153947-hacker-kreeg-e-mail-voor-politie-binnen.html" target="_blank" rel="noopener" class="bento-card reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">NOS Nieuws</span>
+            <span class="outlet-year">2016</span>
           </div>
           <h3>Hacker kreeg e-mail voor politie binnen</h3>
-          <p>Door verlopen politiedomeinen te registreren ontving ik anderhalf jaar lang vertrouwelijke politie-e-mails — arrestatiebevelen, jeugdzorgdossiers en beveiligingsrapporten van Veilig Thuis.</p>
-          <div class="card-tags">
-            <span>Politie</span>
-            <span>Responsible Disclosure</span>
+          <p>Via verlopen domeinnamen ontving ik anderhalf jaar lang vertrouwelijke politie-e-mails — arrestatiebevelen en jeugdzorgdossiers.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>Politie</span><span>Disclosure</span></div>
+            <span class="read-more">Lees →</span>
           </div>
-          <span class="card-arrow">→ Lees artikel</span>
         </a>
 
-        <a href="https://www.bnr.nl/nieuws/binnenland/10316797/politiegeheimen-liggen-op-straat" target="_blank" rel="noopener" class="media-card reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">BNR Nieuwsradio</span>
-              <span class="media-year">2016</span>
-            </div>
+        <a href="https://www.bnr.nl/nieuws/binnenland/10316797/politiegeheimen-liggen-op-straat" target="_blank" rel="noopener" class="bento-card reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">BNR Nieuwsradio</span>
+            <span class="outlet-year">2016</span>
           </div>
           <h3>Politiegeheimen liggen op straat</h3>
-          <p>Samen met BNR: twee jaar na mijn waarschuwing was de Nationale Politie nog steeds kwetsbaar. Het onderzoek leidde tot Kamervragen van de PvdA in de Tweede Kamer.</p>
-          <div class="card-tags">
-            <span>Politie</span>
-            <span>Kamervragen</span>
+          <p>Twee jaar na mijn waarschuwing nog steeds kwetsbaar. Leidde tot Kamervragen van de PvdA.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>Politie</span><span>Kamervragen</span></div>
+            <span class="read-more">Lees →</span>
           </div>
-          <span class="card-arrow">→ Lees artikel</span>
         </a>
 
-        <a href="https://www.ftm.nl/tag/wouter-slotboom" target="_blank" rel="noopener" class="media-card reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">Follow the Money</span>
-              <span class="media-year">2016 – heden</span>
-            </div>
+        <a href="https://thecorrespondent.com/1101/what-we-give-away-when-we-log-on-to-a-public-wifi-network/33862356-a30a8943" target="_blank" rel="noopener" class="bento-card reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">The Correspondent</span>
+            <span class="outlet-year">2014</span>
+          </div>
+          <h3>What we give away when we log on to a public WiFi network</h3>
+          <p>Engelse vertaling. Aanleiding voor security-campagnes wereldwijd.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>English</span><span>Global</span></div>
+            <span class="read-more">Read →</span>
+          </div>
+        </a>
+
+        <a href="https://www.ftm.nl/tag/wouter-slotboom" target="_blank" rel="noopener" class="bento-card reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">Follow the Money</span>
+            <span class="outlet-year">2016–heden</span>
           </div>
           <h3>Onderzoeken digitale veiligheid</h3>
-          <p>Meerdere samenwerkingen met onderzoeksplatform Follow the Money rondom digitale kwetsbaarheden bij overheid en bedrijfsleven.</p>
-          <div class="card-tags">
-            <span>Onderzoeksjournalistiek</span>
-            <span>Overheid</span>
+          <p>Meerdere samenwerkingen rond kwetsbaarheden bij overheid en bedrijfsleven.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>Overheid</span><span>Onderzoek</span></div>
+            <span class="read-more">Bekijk →</span>
           </div>
-          <span class="card-arrow">→ Bekijk onderzoeken</span>
         </a>
 
-        <a href="https://www.rtlnieuws.nl/node/1986321" target="_blank" rel="noopener" class="media-card reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">RTL Nieuws</span>
-              <span class="media-year">2013</span>
-            </div>
+        <a href="https://www.rtlnieuws.nl/node/1986321" target="_blank" rel="noopener" class="bento-card reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">RTL Nieuws</span>
+            <span class="outlet-year">2013</span>
           </div>
           <h3>Betrapt door wifi</h3>
-          <p>Live demonstratie voor RTL Nieuws: hoe eenvoudig het is om via een nep-wifi-netwerk de gegevens van willekeurige voorbijgangers te onderscheppen.</p>
-          <div class="card-tags">
-            <span>TV</span>
-            <span>Live demo</span>
+          <p>Live televisiedemonstratie: in real-time data onderscheppen van voorbijgangers via een nep-netwerk.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>TV</span><span>Live demo</span></div>
+            <span class="read-more">Bekijk →</span>
           </div>
-          <span class="card-arrow">→ Bekijk fragment</span>
         </a>
 
-        <a href="https://www.npo3fm.nl/de-bende-van-van-der-lende/fragmenten/audio/278811-ethisch-hacker-wouter-slotboom-over-veiligheid-persoonlijke-gegevens" target="_blank" rel="noopener" class="media-card reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">NPO 3FM</span>
-              <span class="media-year">Radio</span>
-            </div>
+        <a href="https://www.npo3fm.nl/de-bende-van-van-der-lende/fragmenten/audio/278811-ethisch-hacker-wouter-slotboom-over-veiligheid-persoonlijke-gegevens" target="_blank" rel="noopener" class="bento-card reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">NPO 3FM</span>
+            <span class="outlet-year">Radio</span>
           </div>
-          <h3>Ethisch hacker over veiligheid persoonlijke gegevens</h3>
-          <p>Radiogesprek over digitale privacy, persoonlijke gegevens en hoe makkelijk het is om die te onderscheppen via openbare netwerken.</p>
-          <div class="card-tags">
-            <span>Radio</span>
-            <span>Privacy</span>
+          <h3>Ethisch hacker over veiligheid persoonsgegevens</h3>
+          <p>Radiogesprek over digitale privacy en hoe eenvoudig persoonlijke data te onderscheppen is.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>Radio</span><span>Privacy</span></div>
+            <span class="read-more">Beluister →</span>
           </div>
-          <span class="card-arrow">→ Beluister fragment</span>
         </a>
 
-        <a href="https://www.bnr.nl/nieuws/binnenland/10316892/politie-vraagt-domeinnamen-terug-van-hacker" target="_blank" rel="noopener" class="media-card reveal">
-          <div class="media-card-top">
-            <div class="media-meta">
-              <span class="media-outlet">BNR Nieuwsradio</span>
-              <span class="media-year">2016</span>
-            </div>
+        <a href="https://www.bnr.nl/nieuws/binnenland/10316892/politie-vraagt-domeinnamen-terug-van-hacker" target="_blank" rel="noopener" class="bento-card reveal">
+          <div class="bento-tag">
+            <span class="outlet-name">BNR Nieuwsradio</span>
+            <span class="outlet-year">2016</span>
           </div>
           <h3>Politie vraagt domeinnamen terug van hacker</h3>
-          <p>Na publicatie van het onderzoek nam de politie contact op en vroeg de domeinen terug. Ik stemde in — het doel was bereikt: het lek was gedicht.</p>
-          <div class="card-tags">
-            <span>Politie</span>
-            <span>Follow-up</span>
+          <p>Na publicatie nam de politie contact op. Ik stemde in — het doel was bereikt.</p>
+          <div class="bento-footer">
+            <div class="tags"><span>Follow-up</span></div>
+            <span class="read-more">Lees →</span>
           </div>
-          <span class="card-arrow">→ Lees artikel</span>
         </a>
 
       </div>
@@ -255,73 +283,79 @@
   <!-- Speaking -->
   <section id="speaking">
     <div class="container">
-      <h2 class="section-title reveal">Optredens &amp; Lezingen</h2>
-      <p class="section-sub reveal">Van nationale TV-studio's tot boardrooms en conferentiezalen — ik maak cybersecurity concreet en onvermijdelijk.</p>
-
-      <div class="speaking-grid">
-
-        <div class="speaking-card reveal">
-          <div class="speaking-icon">📺</div>
-          <h3>TV &amp; Radio</h3>
-          <p>Vaste gast bij RTL Nieuws, EditieNL, BNR Nieuwsradio en NPO 3FM voor live demonstraties en duiding bij actuele datalekken en cybercrime-incidenten.</p>
-        </div>
-
-        <div class="speaking-card reveal">
-          <div class="speaking-icon">🎤</div>
-          <h3>Keynotes &amp; Conferenties</h3>
-          <p>Spreker op o.a. <strong>Conversion Hotel 2017</strong> en <strong>Best of Sharing 2017</strong>. Live hack-demonstraties met WiFi Pineapple en man-in-the-middle aanvallen die het publiek direct raken.</p>
-        </div>
-
-        <div class="speaking-card reveal">
-          <div class="speaking-icon">🏢</div>
-          <h3>Bedrijfstrainingen</h3>
-          <p>Security awareness sessies voor organisaties van MKB tot grote multinationals. Medewerkers verlaten de zaal met een fundamenteel ander begrip van digitale risico's.</p>
-        </div>
-
-        <div class="speaking-card reveal">
-          <div class="speaking-icon">🔎</div>
-          <h3>Penetration Testing</h3>
-          <p>Ethische hacking opdrachten waarbij ik netwerken, applicaties en systemen test op kwetsbaarheden — met een helder rapport en concrete aanbevelingen als resultaat.</p>
-        </div>
-
+      <div class="section-header reveal">
+        <div class="label">Optredens &amp; Lezingen</div>
+        <h2>Cybersecurity die <span class="text-accent">blijft hangen</span></h2>
       </div>
-
-      <!-- Quote -->
-      <blockquote class="big-quote reveal">
-        <p>"Wat mensen niet zien, vinden ze niet zo eng. Daarom laat ik het ze zien."</p>
-        <cite>— Wouter Slotboom</cite>
-      </blockquote>
-
+      <div class="speaking-layout">
+        <div class="speaking-items">
+          <div class="speaking-row reveal">
+            <div class="speaking-num">01</div>
+            <div class="speaking-content">
+              <h3>Keynotes &amp; Conferenties</h3>
+              <p>Spreker op o.a. <strong>Conversion Hotel 2017</strong> en <strong>Best of Sharing 2017</strong>. Live hack-demonstraties met WiFi Pineapple en man-in-the-middle aanvallen. Het publiek verlaat de zaal met een ander gevoel van veiligheid.</p>
+            </div>
+          </div>
+          <div class="speaking-row reveal">
+            <div class="speaking-num">02</div>
+            <div class="speaking-content">
+              <h3>TV &amp; Radio</h3>
+              <p>Vaste expert bij <strong>RTL Nieuws</strong>, <strong>EditieNL</strong>, <strong>BNR Nieuwsradio</strong> en <strong>NPO 3FM</strong>. Beschikbaar voor live demonstraties, studio-optredens en achtergrondtoelichting bij actuele incidenten.</p>
+            </div>
+          </div>
+          <div class="speaking-row reveal">
+            <div class="speaking-num">03</div>
+            <div class="speaking-content">
+              <h3>Bedrijfstrainingen</h3>
+              <p>Security awareness sessies voor MKB tot multinational. Geen droge PowerPoints — maar een laptop, een €70-apparaatje en de live data van mensen in de zaal.</p>
+            </div>
+          </div>
+          <div class="speaking-row reveal">
+            <div class="speaking-num">04</div>
+            <div class="speaking-content">
+              <h3>Penetration Testing</h3>
+              <p>Ethische hacking opdrachten voor netwerken, applicaties en infrastructuur. Helder rapport, concrete aanbevelingen, geen buzzwords.</p>
+            </div>
+          </div>
+        </div>
+        <div class="speaking-quote reveal">
+          <blockquote>
+            <p>"Wat mensen niet zien,<br>vinden ze niet zo eng.<br><span class="text-accent">Daarom laat ik het zien.</span>"</p>
+            <cite>— Wouter Slotboom</cite>
+          </blockquote>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <div class="contact-grid">
+      <div class="contact-layout">
         <div class="contact-left reveal">
-          <h2 class="section-title">Contact</h2>
-          <p>Wil je een lezing of demonstratie voor jouw organisatie? Een penetration test? Of heb je een tip over een beveiligingslek?</p>
-          <div class="contact-options">
-            <div class="contact-option">
-              <span class="co-icon">🎤</span>
+          <div class="label">Contact</div>
+          <h2>Laten we <span class="text-accent">praten</span></h2>
+          <p>Een lezing, een demonstratie, een pentest — of heb je een tip over een beveiligingslek?</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="ci-icon">🎤</span>
               <div>
                 <strong>Lezing / Keynote</strong>
                 <p>Live hack-demonstraties voor elk publiek</p>
               </div>
             </div>
-            <div class="contact-option">
-              <span class="co-icon">🔐</span>
+            <div class="contact-item">
+              <span class="ci-icon">🔐</span>
               <div>
-                <strong>Pentest / Audit</strong>
-                <p>Ik zoek de zwakke plekken voordat anderen dat doen</p>
+                <strong>Pentest / Security Audit</strong>
+                <p>Ik zoek de zwakke plekken vóór anderen dat doen</p>
               </div>
             </div>
-            <div class="contact-option">
-              <span class="co-icon">📰</span>
+            <div class="contact-item">
+              <span class="ci-icon">📰</span>
               <div>
                 <strong>Media &amp; Pers</strong>
-                <p>Beschikbaar voor interviews, demonstraties en achtergrond</p>
+                <p>Beschikbaar voor interviews en achtergrond</p>
               </div>
             </div>
           </div>
@@ -339,22 +373,25 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="subject">Onderwerp</label>
+              <label for="subject">Ik wil graag...</label>
               <select id="subject" name="subject">
                 <option value="">Selecteer een onderwerp</option>
-                <option>Lezing / Keynote</option>
-                <option>Bedrijfstraining</option>
-                <option>Penetration Test</option>
-                <option>Media / Interview</option>
-                <option>Security Tip</option>
-                <option>Anders</option>
+                <option>Een lezing of keynote boeken</option>
+                <option>Een bedrijfstraining aanvragen</option>
+                <option>Een penetration test bespreken</option>
+                <option>Een media-interview plannen</option>
+                <option>Een beveiligingslek melden</option>
+                <option>Iets anders</option>
               </select>
             </div>
             <div class="form-group">
               <label for="message">Bericht</label>
-              <textarea id="message" name="message" rows="5" placeholder="Jouw bericht..." required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Vertel me meer..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Versturen</button>
+            <button type="submit" class="btn-submit">
+              <span class="btn-text">Versturen</span>
+              <span class="btn-icon">→</span>
+            </button>
             <p class="form-note" id="formNote"></p>
           </form>
         </div>
@@ -362,21 +399,31 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <div class="footer-inner">
-        <div>
-          <span class="footer-logo"><span class="prompt">&gt;</span> WS</span>
-          <p class="footer-tagline">Ethisch Hacker &amp; Onderzoeksjournalist</p>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">[WS]</span>
+          <p>Ethisch Hacker &amp; Onderzoeksjournalist</p>
         </div>
-        <div class="footer-links">
+        <nav class="footer-nav">
+          <a href="#about">Over mij</a>
+          <a href="#media">Media</a>
+          <a href="#speaking">Optredens</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-social">
           <a href="https://x.com/wouter4811" target="_blank" rel="noopener">X / Twitter</a>
           <a href="https://nl.linkedin.com/in/wouterslotboom" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/0x4811" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.ftm.nl/tag/wouter-slotboom" target="_blank" rel="noopener">Follow the Money</a>
+          <a href="https://www.ftm.nl/tag/wouter-slotboom" target="_blank" rel="noopener">FTM</a>
         </div>
       </div>
-      <p class="footer-copy">&copy; 2026 Wouter Slotboom. Alle rechten voorbehouden.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Wouter Slotboom</p>
+        <p class="footer-mono">// stay curious, stay safe</p>
+      </div>
     </div>
   </footer>
 
