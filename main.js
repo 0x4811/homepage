@@ -10,18 +10,14 @@ const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
-  const isOpen = navLinks.classList.contains('open');
-  hamburger.setAttribute('aria-expanded', isOpen);
+  hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-  });
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
 // Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(
   entries => entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -32,12 +28,15 @@ const observer = new IntersectionObserver(
   { threshold: 0.1 }
 );
 
-reveals.forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.05}s`;
+  observer.observe(el);
+});
 
-// Add reveal class to sections
-document.querySelectorAll('#about .about-grid, #projects .project-card, #contact .contact-form').forEach((el, i) => {
+// Also observe media cards and speaking items (added after page load)
+document.querySelectorAll('.media-card, .speaking-item').forEach((el, i) => {
   el.classList.add('reveal');
-  el.style.transitionDelay = `${i * 0.08}s`;
+  el.style.transitionDelay = `${i * 0.07}s`;
   observer.observe(el);
 });
 
@@ -48,9 +47,9 @@ const formNote = document.getElementById('formNote');
 form.addEventListener('submit', e => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
-  btn.textContent = 'Verzonden!';
+  btn.textContent = 'Verzonden ✓';
   btn.disabled = true;
-  formNote.textContent = 'Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.';
+  formNote.textContent = '> Bericht ontvangen. Ik neem zo snel mogelijk contact op.';
   form.reset();
   setTimeout(() => {
     btn.textContent = 'Verzenden';

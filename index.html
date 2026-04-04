@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wouter Slotboom — Persoonlijke Website</title>
+  <title>Wouter Slotboom — Ethisch Hacker</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,7 +14,8 @@
       <span class="logo">WS</span>
       <ul class="nav-links">
         <li><a href="#about">Over mij</a></li>
-        <li><a href="#projects">Projecten</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#speaking">Optredens</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -25,12 +26,14 @@
 
   <!-- Hero -->
   <section id="hero">
+    <div class="hero-bg-grid"></div>
     <div class="hero-content">
-      <p class="hero-greeting">Hallo, ik ben</p>
+      <p class="hero-greeting"><span class="prompt">&gt;</span> Mijn naam is</p>
       <h1 class="hero-name">Wouter Slotboom</h1>
-      <p class="hero-title">Software Developer & Builder</p>
+      <p class="hero-title">Ethisch Hacker &amp; Onderzoeksjournalist</p>
+      <p class="hero-sub">Ik laat organisaties en media zien hoe kwetsbaar digitale systemen zijn — voordat kwaadwillenden dat doen.</p>
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Bekijk mijn werk</a>
+        <a href="#media" class="btn btn-primary">Mijn werk in de media</a>
         <a href="#contact" class="btn btn-outline">Neem contact op</a>
       </div>
     </div>
@@ -43,89 +46,149 @@
   <!-- About -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">Over mij</h2>
-      <div class="about-grid">
+      <h2 class="section-title reveal">Over mij</h2>
+      <div class="about-grid reveal">
         <div class="about-avatar">
           <div class="avatar-placeholder">WS</div>
         </div>
         <div class="about-text">
-          <p>Hallo! Ik ben Wouter Slotboom, een software developer met een passie voor het bouwen van slimme, schaalbare webapplicaties en digitale tools. Ik hou van clean code, goede developer experience en oplossingen die echt werken.</p>
-          <p>Van frontend tot infrastructure — ik pak het graag end-to-end aan en leer continu bij. Buiten het programmeren ben ik altijd op zoek naar nieuwe technologieën om te verkennen.</p>
+          <p>Ik ben Wouter Slotboom, ethisch hacker en onderzoeksjournalist. Al meer dan een decennium demonstreer ik hoe kwetsbaar onze digitale omgeving is — van openbare wifi-netwerken tot overheidsinfrastructuur.</p>
+          <p>Mijn aanpak is eenvoudig: ik laat zien hoe aanvallen werken, zodat organisaties en mensen begrijpen wat er op het spel staat. Niet met technisch jargon, maar met concrete demonstraties die indruk maken.</p>
+          <p>Ik werk samen met journalisten, TV-programma's en beveiligingsteams om kwetsbaarheden verantwoord bloot te leggen en op te lossen.</p>
           <div class="skills">
-            <span class="skill-tag">JavaScript / TypeScript</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Cloudflare</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Netwerk Security</span>
+            <span class="skill-tag">WiFi Exploitatie</span>
+            <span class="skill-tag">Penetration Testing</span>
+            <span class="skill-tag">Social Engineering</span>
+            <span class="skill-tag">Responsible Disclosure</span>
+            <span class="skill-tag">Security Awareness</span>
+            <span class="skill-tag">Onderzoeksjournalistiek</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects">
+  <!-- Media -->
+  <section id="media">
     <div class="container">
-      <h2 class="section-title">Projecten</h2>
-      <div class="projects-grid">
+      <h2 class="section-title reveal">In de media</h2>
+      <p class="section-sub reveal">Onderzoeken en demonstraties die nationaal en internationaal aandacht trokken.</p>
+      <div class="media-grid">
 
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🌐</span>
-            <div class="project-links">
-              <a href="https://github.com/0x4811/homepage" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+        <a href="https://decorrespondent.nl/845/dit-geef-je-allemaal-prijs-als-je-inlogt-op-een-openbaar-wifinetwerk/25988820-b2a600e1" target="_blank" rel="noopener" class="media-card reveal">
+          <div class="media-card-header">
+            <span class="media-outlet">De Correspondent</span>
+            <span class="media-year">2013</span>
           </div>
-          <h3>Persoonlijke Website</h3>
-          <p>Deze website! Gebouwd als een snelle, statische site zonder frameworks — pure HTML, CSS en vanilla JavaScript. Gehost op Cloudflare Pages voor optimale performance wereldwijd.</p>
-          <div class="project-tags">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Cloudflare</span>
-          </div>
-        </article>
+          <h3>Dit geef je allemaal prijs als je inlogt op een openbaar wifinetwerk</h3>
+          <p>Het meest gelezen artikel van De Correspondent. In een Amsterdams café onderschepte ik in 20 minuten alle data van 20 nietsvermoedende bezoekers. Internationaal overgenomen door The Guardian, Quartz en tientallen andere media.</p>
+          <span class="media-tag">Wifi Security</span>
+          <span class="media-tag">Viral</span>
+          <span class="media-arrow">→</span>
+        </a>
 
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-icon">🤖</span>
-            <div class="project-links">
-              <a href="https://github.com/0x4811" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+        <a href="https://thecorrespondent.com/1101/what-we-give-away-when-we-log-on-to-a-public-wifi-network/33862356-a30a8943" target="_blank" rel="noopener" class="media-card reveal">
+          <div class="media-card-header">
+            <span class="media-outlet">The Correspondent</span>
+            <span class="media-year">2014</span>
           </div>
-          <h3>Automation Tools</h3>
-          <p>Een verzameling scripts en tools voor het automatiseren van terugkerende taken. Van data-processing tot API-integraties — alles om productiviteit te verhogen en fouten te minimaliseren.</p>
-          <div class="project-tags">
-            <span>Python</span>
-            <span>Node.js</span>
-            <span>REST API</span>
-          </div>
-        </article>
+          <h3>What we give away when we log on to a public WiFi network</h3>
+          <p>Engelse vertaling van het WiFi-onderzoek. Bereikt een wereldwijd publiek en aanleiding voor security-bewustzijnscampagnes in meerdere landen.</p>
+          <span class="media-tag">English</span>
+          <span class="media-tag">International</span>
+          <span class="media-arrow">→</span>
+        </a>
 
-        <article class="project-card">
-          <div class="project-header">
-            <span class="project-icon">☁️</span>
-            <div class="project-links">
-              <a href="https://github.com/0x4811" target="_blank" rel="noopener" aria-label="GitHub">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              </a>
-            </div>
+        <a href="https://nos.nl/artikel/2153947-hacker-kreeg-e-mail-voor-politie-binnen.html" target="_blank" rel="noopener" class="media-card reveal">
+          <div class="media-card-header">
+            <span class="media-outlet">NOS Nieuws</span>
+            <span class="media-year">2016</span>
           </div>
-          <h3>Cloud Infrastructure</h3>
-          <p>Projecten rondom serverless deployment en edge computing met Cloudflare Workers. Snelle, goedkope en globally gedistribueerde backends zonder server-beheer overhead.</p>
-          <div class="project-tags">
-            <span>TypeScript</span>
-            <span>Cloudflare Workers</span>
-            <span>Docker</span>
+          <h3>Hacker kreeg e-mail voor politie binnen</h3>
+          <p>Door verlopen politiedomeinen te registreren ontving ik anderhalf jaar lang vertrouwelijke e-mails bestemd voor de Nationale Politie — van arrestatiebevelen tot jeugdzorgdossiers.</p>
+          <span class="media-tag">Politie</span>
+          <span class="media-tag">Responsible Disclosure</span>
+          <span class="media-arrow">→</span>
+        </a>
+
+        <a href="https://www.bnr.nl/nieuws/binnenland/10316797/politiegeheimen-liggen-op-straat" target="_blank" rel="noopener" class="media-card reveal">
+          <div class="media-card-header">
+            <span class="media-outlet">BNR Nieuwsradio</span>
+            <span class="media-year">2016</span>
           </div>
-        </article>
+          <h3>Politiegeheimen liggen op straat</h3>
+          <p>Samen met BNR onderzocht ik hoe de Nationale Politie twee jaar na mijn waarschuwing nog steeds kwetsbaar was. Het onderzoek leidde tot Kamervragen van de PvdA.</p>
+          <span class="media-tag">Politie</span>
+          <span class="media-tag">Onderzoek</span>
+          <span class="media-arrow">→</span>
+        </a>
+
+        <a href="https://www.ftm.nl/tag/wouter-slotboom" target="_blank" rel="noopener" class="media-card reveal">
+          <div class="media-card-header">
+            <span class="media-outlet">Follow the Money</span>
+            <span class="media-year">2016–heden</span>
+          </div>
+          <h3>Onderzoeken digitale veiligheid</h3>
+          <p>Meerdere samenwerkingen met het onderzoeksplatform Follow the Money rondom digitale kwetsbaarheden bij overheid en bedrijfsleven.</p>
+          <span class="media-tag">Onderzoeksjournalistiek</span>
+          <span class="media-arrow">→</span>
+        </a>
+
+        <a href="https://www.rtlnieuws.nl/node/1986321" target="_blank" rel="noopener" class="media-card reveal">
+          <div class="media-card-header">
+            <span class="media-outlet">RTL Nieuws</span>
+            <span class="media-year">2013</span>
+          </div>
+          <h3>Betrapt door wifi</h3>
+          <p>Live demonstratie voor RTL Nieuws: hoe eenvoudig het is om via een nep-wifi-netwerk de gegevens van willekeurige voorbijgangers te onderscheppen.</p>
+          <span class="media-tag">TV</span>
+          <span class="media-tag">Demonstratie</span>
+          <span class="media-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking -->
+  <section id="speaking">
+    <div class="container">
+      <h2 class="section-title reveal">Optredens &amp; Lezingen</h2>
+      <p class="section-sub reveal">Van conferenties tot TV-studio's — ik maak cybersecurity begrijpelijk voor elk publiek.</p>
+      <div class="speaking-list">
+
+        <div class="speaking-item reveal">
+          <div class="speaking-icon">📺</div>
+          <div class="speaking-content">
+            <h3>TV & Radio</h3>
+            <p>Regelmatig te gast bij RTL Nieuws, EditieNL, BNR Nieuwsradio en andere nationale media voor live demonstraties en duiding bij actuele cybersecurity-incidenten.</p>
+          </div>
+        </div>
+
+        <div class="speaking-item reveal">
+          <div class="speaking-icon">🎤</div>
+          <div class="speaking-content">
+            <h3>Conferenties &amp; Events</h3>
+            <p>Keynote spreker op o.a. Conversion Hotel (2017) en diverse security-conferenties. Interactieve demonstraties van netwerkaanvallen die het publiek direct laten zien hoe kwetsbaar ze zijn.</p>
+          </div>
+        </div>
+
+        <div class="speaking-item reveal">
+          <div class="speaking-icon">🏢</div>
+          <div class="speaking-content">
+            <h3>Bedrijfstrainingen</h3>
+            <p>Security awareness sessies voor organisaties van MKB tot grote multinationals. Praktische demonstraties die medewerkers bewust maken van digitale risico's.</p>
+          </div>
+        </div>
+
+        <div class="speaking-item reveal">
+          <div class="speaking-icon">🔍</div>
+          <div class="speaking-content">
+            <h3>Penetration Testing</h3>
+            <p>Ethische hacking opdrachten waarbij ik netwerken, applicaties en systemen test op kwetsbaarheden — met een helder rapport en concrete aanbevelingen als resultaat.</p>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -134,9 +197,9 @@
   <!-- Contact -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="contact-subtitle">Heb je een vraag of wil je samenwerken? Stuur me een bericht!</p>
-      <form class="contact-form" id="contactForm">
+      <h2 class="section-title reveal">Contact</h2>
+      <p class="contact-subtitle reveal">Wil je een lezing, penetration test, of heb je een tip? Stuur me een bericht.</p>
+      <form class="contact-form reveal" id="contactForm">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Naam</label>
@@ -146,6 +209,10 @@
             <label for="email">E-mail</label>
             <input type="email" id="email" name="email" placeholder="jouw@email.nl" required />
           </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">Onderwerp</label>
+          <input type="text" id="subject" name="subject" placeholder="Lezing / Pentest / Tip / Anders" />
         </div>
         <div class="form-group">
           <label for="message">Bericht</label>
@@ -160,8 +227,10 @@
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 Wouter Slotboom. Alle rechten voorbehouden.</p>
+      <p>&copy; 2026 Wouter Slotboom. Ethisch Hacker &amp; Onderzoeksjournalist.</p>
       <div class="footer-links">
+        <a href="https://x.com/wouter4811" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://nl.linkedin.com/in/wouterslotboom" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://github.com/0x4811" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
