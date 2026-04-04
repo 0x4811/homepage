@@ -771,6 +771,9 @@ h1.hero-name {
 }
 .bento-hero {
   grid-column: span 2;
+}
+.bento-full {
+  grid-column: span 3;
   background: linear-gradient(135deg, rgba(0,229,160,.04) 0%, rgba(14,165,233,.04) 100%);
   border-color: rgba(0,229,160,.15);
 }
@@ -1168,6 +1171,7 @@ footer {
   .speaking-quote { position: static; }
   .bento-grid { grid-template-columns: repeat(2, 1fr); }
   .bento-hero { grid-column: span 2; }
+  .bento-full { grid-column: span 2; }
 }
 
 @media (max-width: 768px) {
@@ -1185,7 +1189,7 @@ footer {
   .stat-divider { display: none; }
   .stat-block { padding: 2rem 1.5rem; }
   .bento-grid { grid-template-columns: 1fr; }
-  .bento-hero { grid-column: span 1; }
+  .bento-hero, .bento-full { grid-column: span 1; }
   .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
   .form-row { grid-template-columns: 1fr; }
   .footer-top { flex-direction: column; gap: 2rem; }
