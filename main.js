@@ -1,49 +1,41 @@
-// Navbar scroll effect
+// Navbar scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
+  navbar.classList.toggle('scrolled', window.scrollY > 30);
 });
 
-// Hamburger menu
+// Hamburger
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
-
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  hamburger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+  const open = navLinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', open);
 });
-
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+  });
 });
 
 // Scroll reveal
-const observer = new IntersectionObserver(
-  entries => entries.forEach(entry => {
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
       observer.unobserve(entry.target);
     }
-  }),
-  { threshold: 0.1 }
-);
+  });
+}, { threshold: 0.08 });
 
 document.querySelectorAll('.reveal').forEach((el, i) => {
-  el.style.transitionDelay = `${i * 0.05}s`;
-  observer.observe(el);
-});
-
-// Also observe media cards and speaking items (added after page load)
-document.querySelectorAll('.media-card, .speaking-item').forEach((el, i) => {
-  el.classList.add('reveal');
-  el.style.transitionDelay = `${i * 0.07}s`;
+  el.style.transitionDelay = `${i * 0.04}s`;
   observer.observe(el);
 });
 
 // Contact form
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
-
 form.addEventListener('submit', e => {
   e.preventDefault();
   const btn = form.querySelector('button[type="submit"]');
@@ -52,7 +44,7 @@ form.addEventListener('submit', e => {
   formNote.textContent = '> Bericht ontvangen. Ik neem zo snel mogelijk contact op.';
   form.reset();
   setTimeout(() => {
-    btn.textContent = 'Verzenden';
+    btn.textContent = 'Versturen';
     btn.disabled = false;
     formNote.textContent = '';
   }, 5000);
