@@ -118,20 +118,6 @@ document.querySelectorAll('.stat-num[data-target]').forEach(el => {
   statObserver.observe(el);
 });
 
-// ── Avatar ring spin ─────────────────────────
-(function spinRing() {
-  const avatar = document.querySelector('.avatar-inner');
-  if (!avatar || !CSS.supports('background', 'conic-gradient(red, blue)')) return;
-  let angle = 0;
-  function tick() {
-    angle = (angle + 0.3) % 360;
-    avatar.style.backgroundImage =
-      `linear-gradient(var(--bg2), var(--bg2)),
-       conic-gradient(from ${angle}deg, var(--accent) 0deg, var(--accent2) 120deg, var(--accent3) 240deg, var(--accent) 360deg)`;
-    requestAnimationFrame(tick);
-  }
-  tick();
-})();
 
 // ── Contact Form → Cloudflare Worker ─────────
 const form = document.getElementById('contactForm');
