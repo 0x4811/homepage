@@ -399,24 +399,10 @@ h1.hero-name {
 }
 .hero-name .line { display: block; }
 .hero-name .accent-line {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent);
 }
-/* accent-line animates as one block; hero-char inherits the gradient */
-.hero-name .accent-line .hero-char {
-  -webkit-text-fill-color: inherit;
-  background: inherit;
-  -webkit-background-clip: inherit;
-  background-clip: inherit;
-}
-/* Light mode: use darker accent shades so text is visible on light bg */
 html.light .hero-name .accent-line {
-  background: linear-gradient(135deg, #007a54 0%, #0369a1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #006644;
 }
 
 /* Hero staggered char entrance */
