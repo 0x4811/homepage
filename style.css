@@ -399,6 +399,9 @@ h1.hero-name {
 }
 .hero-name .line { display: block; }
 .hero-name .accent-line {
+  /* gradient wordt op de individuele chars gezet via JS-gesplitste spans */
+}
+.hero-name .accent-line .hero-char {
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
