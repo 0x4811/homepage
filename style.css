@@ -160,7 +160,7 @@ section {
 }
 
 .logo {
-  font-family: var(--sans);
+  font-family: var(--inter);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: -.02em;
@@ -198,6 +198,27 @@ section {
   align-items: center;
   gap: .75rem;
 }
+
+/* Lang toggle */
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: .2rem .55rem;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  transition: border-color .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); }
+.lang-opt { color: var(--muted); transition: color .2s; line-height: 1; }
+.lang-opt.active { color: var(--accent); }
+.lang-sep { color: var(--border); line-height: 1; }
 
 /* Theme toggle */
 .theme-toggle {
@@ -1141,15 +1162,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-.nav-links { display: none; }
+  .nav-links { display: none; }
   .hamburger { display: flex; }
   section { padding-block: 4rem; }
-  h1.hero-name { font-size: clamp(3rem, 14vw, 6rem); }
+  h1.hero-name { font-size: clamp(2.8rem, 14vw, 6rem); }
   .hero-inner { padding-top: 8rem; padding-bottom: 6rem; }
+  .hero-sub { font-size: .95rem; }
+  .hero-cta { flex-wrap: wrap; gap: .75rem; }
   .hero-scroll { display: none; }
-  .stats-strip {
-    grid-template-columns: 1fr;
-  }
+  .stats-strip { grid-template-columns: 1fr; }
   .stat-divider { display: none; }
   .stat-block { padding: 2rem 1.5rem; }
   .bento-grid { grid-template-columns: 1fr; }
@@ -1161,7 +1182,14 @@ footer {
 }
 
 @media (max-width: 480px) {
+  .nav-inner { gap: .5rem; }
+  .logo { font-size: .85rem; }
+  .lang-toggle { padding: .18rem .4rem; font-size: .65rem; }
   .hero-cta { flex-direction: column; }
-  .btn-hero-primary, .btn-hero-ghost { justify-content: center; }
+  .btn-hero-primary, .btn-hero-ghost { justify-content: center; width: 100%; }
   .stats-strip { grid-template-columns: 1fr; }
+  .section-header h2 { font-size: clamp(1.6rem, 6vw, 2rem); }
+  .speaking-row { gap: 1rem; }
+  .contact-layout { gap: 2rem; }
+  .bento-card { padding: 1.25rem; }
 }
