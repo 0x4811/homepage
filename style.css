@@ -688,7 +688,7 @@ h1.hero-name {
 }
 .stats-strip {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
   align-items: center;
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
@@ -1183,8 +1183,7 @@ footer {
   .hero-inner { padding-top: 8rem; padding-bottom: 6rem; }
   .hero-scroll { display: none; }
   .stats-strip {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
   }
   .stat-divider { display: none; }
   .stat-block { padding: 2rem 1.5rem; }
