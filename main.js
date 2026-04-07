@@ -25,15 +25,26 @@ themeBtn.addEventListener('click', () => {
   const LINE_OFFSET = 0.1; // extra delay between lines
 
   lines.forEach((line, li) => {
-    const text = line.textContent;
-    line.textContent = '';
-    [...text].forEach((char, ci) => {
+    if (line.classList.contains('accent-line')) {
+      // Animate accent-line as ONE block — do NOT split into chars,
+      // otherwise background-clip:text on the parent stops working.
       const span = document.createElement('span');
       span.className = 'hero-char';
-      span.textContent = char === ' ' ? '\u00A0' : char;
-      span.style.animationDelay = `${0.1 + li * LINE_OFFSET + ci * BASE_DELAY}s`;
+      span.textContent = line.textContent;
+      span.style.animationDelay = `${0.1 + li * LINE_OFFSET}s`;
+      line.textContent = '';
       line.appendChild(span);
-    });
+    } else {
+      const text = line.textContent;
+      line.textContent = '';
+      [...text].forEach((char, ci) => {
+        const span = document.createElement('span');
+        span.className = 'hero-char';
+        span.textContent = char === ' ' ? '\u00A0' : char;
+        span.style.animationDelay = `${0.1 + li * LINE_OFFSET + ci * BASE_DELAY}s`;
+        line.appendChild(span);
+      });
+    }
   });
 })();
 
