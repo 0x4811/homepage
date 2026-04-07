@@ -617,10 +617,25 @@ html.light .hero-name .accent-line {
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
-.about-socials {
+.about-meta {
   display: flex;
   flex-direction: column;
-  gap: .6rem;
+  gap: .75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.about-meta-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: .8rem;
+}
+.about-meta-label {
+  font-family: var(--mono);
+  font-size: .7rem;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 .social-pill {
   display: inline-flex;
@@ -978,9 +993,15 @@ html.light .hero-name .accent-line {
   border-radius: var(--r);
 }
 .ci-icon {
-  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
   flex-shrink: 0;
-  margin-top: .1rem;
+  background: rgba(0,229,160,.08);
+  border: 1px solid rgba(0,229,160,.15);
+  border-radius: 8px;
+  color: var(--accent);
 }
 .contact-item strong {
   display: block;
@@ -1097,14 +1118,13 @@ footer {
   background: var(--bg2);
 }
 .footer-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
   gap: 3rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid var(--border);
   margin-bottom: 1.5rem;
-  flex-wrap: wrap;
 }
 .footer-brand { max-width: 200px; }
 .footer-logo {
@@ -1191,7 +1211,7 @@ footer {
   .bento-hero, .bento-full { grid-column: span 1; }
   .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
   .form-row { grid-template-columns: 1fr; }
-  .footer-top { flex-direction: column; gap: 2rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 
