@@ -644,6 +644,13 @@ html.light .hero-name .accent-line {
   color: var(--muted);
   margin-bottom: 1rem;
 }
+.about-usp {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  color: var(--text) !important;
+  font-size: .92rem !important;
+  margin-top: 1.5rem;
+}
 .skill-cloud {
   display: flex;
   flex-wrap: wrap;
