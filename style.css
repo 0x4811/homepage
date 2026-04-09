@@ -550,16 +550,12 @@ html.light .hero-name .accent-line {
   position: relative;
   width: 180px; height: 180px;
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--mono);
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: -.02em;
   background: var(--bg2);
-  border: 2px solid var(--border);
+  border: 2px solid var(--accent);
 }
 .avatar-badge {
   position: absolute;
@@ -1115,10 +1111,6 @@ footer {
 }
 .footer-brand { max-width: 200px; }
 .footer-logo {
-  font-family: var(--mono);
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--accent);
   display: block;
   margin-bottom: .5rem;
 }
